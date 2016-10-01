@@ -30,6 +30,7 @@ class ApplicationController < ActionController::Base
 
   def fetch_images
     puts "fetching images from Bing"
+    BingSearch.account_key = ENV['BING_KEY']
     BingSearch.image('Han Solo').map{|p| {p.media_url => p.thumbnail.media_url}}
   end
 end

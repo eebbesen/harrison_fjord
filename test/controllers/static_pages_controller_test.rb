@@ -12,4 +12,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
       assert !q.text.empty?
     end
   end
+
+  test 'i_dansk' do
+    assert_equal 'Hån Sølø', StaticPagesController.new.send(:i_dansk, 'Han Solo')
+    assert_equal 'HÅN SØLØ', StaticPagesController.new.send(:i_dansk, 'HAN SOLO')
+  end
 end

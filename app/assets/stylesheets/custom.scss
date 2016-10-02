@@ -1,0 +1,21 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+body {
+  background-color: red;
+}
+
+.quote {
+  text-align: center;
+  font-family: 'Comic Sans MS';
+  font-weight: bold;
+  font-size: 200%;
+  padding: 10px;
+  color: green;
+}
+
+.image, img {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+}

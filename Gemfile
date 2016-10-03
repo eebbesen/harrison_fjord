@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bing-search'
+gem 'bing_translator'
 gem 'bootstrap-sass'
 
 # Use Capistrano for deployment

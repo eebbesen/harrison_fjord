@@ -11,6 +11,11 @@ You will need to set the `BING_KEY` environment variable as the code references 
 
 In an attempt to conserve calls and krone, fifty images are cached after the server is started/restarted.
 
+## Bing translate
+Because of frequent runtime API errors (and because the values are static) I've translated the quotes using lib/bing_translate.rb and stored the values in constant.
+
+If you want to use the [Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (again, not required at runtime) set `BING_CLIENT` and `BING_SECRET` environment variables as the script references ENV['BING_CLIENT'], ENV['BING_SECRET']
+
 ## FAQ
 **You know that replacing 'o' and 'a' with and 'å' and ø' is wrong and plain stupid, right?**
 
@@ -26,17 +31,22 @@ IMDB: http://www.imdb.com/character/ch0000002/quotes.
 
 Fjork it, make your mods, and submit a pull request.
 
------
+---
 🇩🇰
 
 A vittighed, der opstod fra en tilfældig navn valgt til et andet program af mine fra Heroku.
 
 ## Bing søgning
-Denne applikation afhænger [Bing Search API](https://datamarket.azure.com/dataset/bing/search) for billeddata. [Den Bing Search API](https://datamarket.azure.com/dataset/bing/search) tilbyder mange forskellige planer, hvoraf det ene giver 5.000 transaktioner / måned til 0 kroner.
+Denne applikation afhænger [Bing Search API](https://datamarket.azure.com/dataset/bing/search) for billeddata. [Den Bing Search API](https://datamarket.azure.com/dataset/bing/search) tilbyder mange forskellige planer, hvoraf det ene giver 5.000 transaktioner/måned til 0 kroner.
 
-Du skal sætte `BING_KEY` miljøvariablen som kode referencer` ENV [ 'BING_KEY'] `.
+Du skal sætte `BING_KEY` miljøvariablen som kode referencer` ENV['BING_KEY'] `.
 
-I et forsøg på at bevare opkald og krone, er halvtreds billeder, cached efter serveren startes / genstartes.
+I et forsøg på at bevare opkald og krone, er halvtreds billeder, cached efter serveren startes/genstartes.
+
+## Bing oversætte
+På grund af hyppige runtime API fejl (og fordi værdierne er statisk) Jeg har oversat de citater bruger lib/bing_translate.rb og opbevaret værdierne i konstant.
+
+Hvis du ønsker at bruge [den Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (igen, ikke kræves på runtime) sat `BING_CLIENT` og `BING_SECRET` miljøvariabler som scriptet refererer ENV['BING_CLIENT'], ENV['BING_SECRET']
 
 ## Ofte stillede spørgsmål
 **Du ved, at erstatte »o« og »a« med og »å« og »ø« er forkert og almindelig dum, ikke?**

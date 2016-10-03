@@ -27,12 +27,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bing-search'
 gem 'bing_translator'
 gem 'bootstrap-sass'
+gem 'newrelic_rpm'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production do
   gem 'pg', '0.18.4'
-  gem 'newrelic_rpm'
 end
 
 group :development, :test do

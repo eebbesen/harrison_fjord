@@ -5,18 +5,10 @@ body {
   background-color: red;
 }
 
-.wrapper {
-  max-height: 600px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .inner {
-  max-height: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  max-height: 93vh;
+  max-width: 93vh;
+  margin: auto;
 }
 
 .quote {
@@ -25,12 +17,18 @@ body {
   font-weight: bold;
   font-size: 200%;
   padding: 10px;
-  color: green;
+  border: 10px;
+  color: green;}
+
+.image {
+  text-align: center;
+  max-height: 90vh;
+  max-width: 90vh;
+  margin: auto;
 }
 
-.image, img {
-  max-height: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+img {
+  max-height: 75vh;
+  max-width: 75vh;
+  margin: auto;
 }

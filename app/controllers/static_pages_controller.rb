@@ -32,11 +32,19 @@ class StaticPagesController < ApplicationController
   end
 
   # Convert all 'a' and 'o' to 'å' and 'ø' preserving case
+  # one third of the time (theoretically)
   # Yes I know Danish doesn't work this way
   # Tilgiv mig
   def i_dansk(text)
+    x = /[aoAO]/
     r = { 'a' => 'å', 'A' => 'Å', 'o' => 'ø', 'O' => 'Ø' }
-    text.gsub(/[aoAO]/, r)
+    werd = ''
+    text.each_char do |l|
+      rep = Random.rand(3) == 2
+      # byebug if x.match(l)
+      werd += rep ? l.gsub(x, r) : l
+    end
+    werd
   end
 
   # Translate text to Danish using Bing Translator

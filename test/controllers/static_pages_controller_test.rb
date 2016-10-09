@@ -13,8 +13,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  # this can fail and things can be ok -- rerun and/or debug
   test 'i_dansk' do
-    assert_equal 'Hån Sølø', StaticPagesController.new.send(:i_dansk, 'Han Solo')
-    assert_equal 'HÅN SØLØ', StaticPagesController.new.send(:i_dansk, 'HAN SOLO')
+    text = 'Haaaaaaaan Soooooloooo'
+    lower = StaticPagesController.new.send(:i_dansk, text.downcase)
+    assert lower.include?('å') && lower.include?('ø')
+    upper = StaticPagesController.new.send(:i_dansk, text.upcase)
+    assert upper.include?('Å') && upper.include?('Ø')
   end
 end

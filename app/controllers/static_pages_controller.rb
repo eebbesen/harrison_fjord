@@ -25,10 +25,15 @@ class StaticPagesController < ApplicationController
   end
 
   # expensive API call so use sparingly
+  # get 200 images at a time -- gem or API wont' allow more than 50 per call
   def fetch_images
     puts 'fetching images from Bing'
     BingSearch.account_key = ENV['BING_KEY']
-    BingSearch.image('Han Solo').map { |p| { p.media_url => p.thumbnail.media_url } }
+    (0..3).map do |n|
+      BingSearch.image('Han Solo', offset: n * 50).map do |p|
+        { p.media_url => p.thumbnail.media_url }
+      end
+    end.flatten
   end
 
   # Convert all 'a' and 'o' to 'å' and 'ø' preserving case

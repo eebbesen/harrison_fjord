@@ -7,7 +7,7 @@ require 'bing-search'
 BingResult = Struct.new(:media_url, :thumbnail)
 
 module BingSearch
-  def self.image(_text)
+  def self.image(_text, offset = 0)
     puts 'USING FAKE BING'
     thumb1 = BingResult.new('https://fakebing.com/thumb1.jpg')
     pic1 = BingResult.new('https://fakeimages.com/pic1.jpg', thumb1)

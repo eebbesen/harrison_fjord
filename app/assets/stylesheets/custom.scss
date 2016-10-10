@@ -7,7 +7,7 @@ body {
 
 .inner {
   max-height: 93vh;
-  max-width: 93vh;
+  max-width: 93vw;
   margin: auto;
 }
 
@@ -23,12 +23,30 @@ body {
 .image {
   text-align: center;
   max-height: 90vh;
-  max-width: 90vh;
+  max-width: 90vw;
   margin: auto;
 }
 
 img {
   max-height: 75vh;
-  max-width: 75vh;
+  max-width: 75vw;
   margin: auto;
+}
+
+@media only screen and (max-height: 500px) {
+  .quote {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .quote {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  .quote {
+    font-size: 75%;
+  }
 }

@@ -1,9 +1,9 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-body {
+/*body {
   background-color: red;
-}
+}*/
 
 .inner {
   max-height: 93vh;
@@ -49,4 +49,71 @@ img {
   .quote {
     font-size: 75%;
   }
+}
+
+.flag {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px;
+    position: relative;
+    background: purple; /* so we can see gaps */
+    z-index: 1;
+}
+
+#top, #bottom {
+  width: 100%;
+  height: 42.9%;
+  background: blue; /* so we can see gaps */
+  position: relative;
+}
+
+#t1 {
+  background: rgb(210 , 16, 52);
+  width: 32.5%;
+  height: 100%;
+  position: absolute;
+}
+#t2 {
+  background: white;
+  width: 10.7%;
+  height: 100%;
+  left: 32.5%;
+  position: absolute;
+}
+#t3 {
+  background: rgb(210 , 16, 52);
+  width: 56.8%;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+}
+
+#middle {
+  background: white;
+  width: 100%;
+  height: 14.2%; 
+}
+
+#m1 {
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper, .flag {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  max-height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: auto;
+}
+
+.wrapper {
+  z-index: 2;
 }

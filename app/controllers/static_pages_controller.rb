@@ -45,7 +45,7 @@ class StaticPagesController < ApplicationController
     r = { 'a' => 'å', 'A' => 'Å', 'o' => 'ø', 'O' => 'Ø' }
     werd = ''
     text.each_char do |l|
-      rep = Random.rand(3) == 2
+      rep = Random.rand(9) == 2
       # byebug if x.match(l)
       werd += rep ? l.gsub(x, r) : l
     end

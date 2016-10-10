@@ -11,7 +11,7 @@ This application depends upon [the Bing Search API](https://datamarket.azure.com
 
 You will need to set the `BING_KEY` environment variable as the code references `ENV['BING_KEY']`.
 
-In an attempt to conserve calls and krone, fifty images are cached after the server is started/restarted.
+In an attempt to conserve calls and krone, two hundred images are cached after the server is started/restarted.
 
 ## Bing translate
 Because of frequent runtime API errors (and because the values are static) I've translated the quotes using lib/bing_translate.rb and stored the values in constant.

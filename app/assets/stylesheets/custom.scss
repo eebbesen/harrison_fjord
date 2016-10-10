@@ -1,10 +1,6 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-/*body {
-  background-color: red;
-}*/
-
 .inner {
   max-height: 93vh;
   max-width: 93vw;
@@ -18,7 +14,8 @@
   font-size: 200%;
   padding: 10px;
   border: 10px;
-  color: green;}
+  color: green;
+}
 
 .image {
   text-align: center;
@@ -52,14 +49,14 @@ img {
 }
 
 .flag {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    line-height: 50px;
-    margin: 10px;
-    position: relative;
-    background: purple; /* so we can see gaps */
-    z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px;
+  position: relative;
+  background: purple; /* so we can see gaps */
+  z-index: 1;
 }
 
 #top, #bottom {

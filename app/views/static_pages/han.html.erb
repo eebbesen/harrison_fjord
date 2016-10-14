@@ -13,7 +13,12 @@
     <%= @da_quote %>
   </div>
 
-  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+  <div class="facebook">
+    <div id="status"></div>
+    <div id="fblogin">
+      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+    </div>
+  </div>
 </div>
 <div class="flag">
   <div id="top">

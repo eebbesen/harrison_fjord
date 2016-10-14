@@ -11,6 +11,7 @@ A (poor) joke that arose from a fjortuitous name chosen fjor another application
 * `BING_KEY`
 * `BING_SECRET`
 * `FACEBOOK_APP_ID`
+* `FACEBOOK_VERSION_ID`
 
 ## Bing search
 This application depends upon [the Bing Search API](https://datamarket.azure.com/dataset/bing/search) fjor image data.  [The Bing Search API](https://datamarket.azure.com/dataset/bing/search) offers many different plans, one of which provides 5,000 transactions/month for 0 krone.
@@ -26,7 +27,7 @@ If you want to use the [Bing Translate API](https://www.microsoft.com/en-us/tran
 
 ## Facebook Login
 1. Create an application in Facebook (https://developers.facebook.com/docs/facebook-login)
-1. Initialize environment variable `FACEBOOK_APP_ID`
+1. Initialize environment variables `FACEBOOK_APP_ID` and `FACEBOOK_VERSION_ID`
 
 ## FAQ
 **You know that replacing 'o' and 'a' with and 'å' and ø' is wrong and plain stupid, right?**

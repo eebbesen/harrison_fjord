@@ -6,6 +6,12 @@
 
 A (poor) joke that arose from a fjortuitous name chosen fjor another application of mine by Heroku.
 
+## Required environment variables
+* `BING_CLIENT`
+* `BING_KEY`
+* `BING_SECRET`
+* `FACEBOOK_APP_ID`
+
 ## Bing search
 This application depends upon [the Bing Search API](https://datamarket.azure.com/dataset/bing/search) fjor image data.  [The Bing Search API](https://datamarket.azure.com/dataset/bing/search) offers many different plans, one of which provides 5,000 transactions/month for 0 krone.
 
@@ -17,6 +23,10 @@ In an attempt to conserve calls and krone, two hundred images are cached after t
 Because of frequent runtime API errors (and because the values are static) I've translated the quotes using lib/bing_translate.rb and stored the values in constant.
 
 If you want to use the [Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (again, not required at runtime) set `BING_CLIENT` and `BING_SECRET` environment variables as the script references `ENV['BING_CLIENT']`, `ENV['BING_SECRET']`
+
+## Facebook Login
+1. Create an application in Facebook (https://developers.facebook.com/docs/facebook-login)
+1. Initialize environment variable `FACEBOOK_APP_ID`
 
 ## FAQ
 **You know that replacing 'o' and 'a' with and 'å' and ø' is wrong and plain stupid, right?**

@@ -9,11 +9,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body onload="testAPI();">
     <!-- facebook -->
     <script>
       function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
         console.log(response);
         // The response object is returned with a status field that lets the
         // app know the current login status of the person.
@@ -60,15 +59,13 @@
       function testAPI() {
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function(response) {
-          resp = response;
+          console.log(response);
           if (response['name'] != null && response['name'].length > 0) {
             console.log('Successful login for: ' + response.name);
-            document.getElementById('status').innerHTML =
-              'Thanks for logging into Facebook, ' + response.name + '!';
             document.getElementById('fblogin').style.display = 'none';
+            document.getElementById('fbshare').style.display = '';
           } else {
-            document.getElementById('status').innerHTML =
-              'Please login to Facebook';
+            document.getElementById('fbshare').style.display = 'none';
             document.getElementById('fblogin').style.display = '';
           }
         });
@@ -79,7 +76,7 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=<%= ENV['FACEBOOK_APP_ID'] %>";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=<%= ENV['FACEBOOK_VERSION_ID'] %>&appId=<%= ENV['FACEBOOK_APP_ID'] %>";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 

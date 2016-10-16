@@ -49,6 +49,14 @@ Fjork it, make your mods, and submit a pull request.
 
 A vittighed, der opstod fra en tilfældig navn valgt til et andet program af mine fra Heroku.
 
+
+## Krævede miljøvariabler
+* `BING_CLIENT`
+* `BING_KEY`
+* `BING_SECRET`
+* `FACEBOOK_APP_ID`
+* `FACEBOOK_VERSION_ID`
+
 ## Bing søgning
 Denne applikation afhænger [Bing Search API](https://datamarket.azure.com/dataset/bing/search) for billeddata. [Den Bing Search API](https://datamarket.azure.com/dataset/bing/search) tilbyder mange forskellige planer, hvoraf det ene giver 5.000 transaktioner/måned til 0 kroner.
 
@@ -60,6 +68,10 @@ I et forsøg på at bevare opkald og krone, er halvtreds billeder, cached efter 
 På grund af hyppige runtime API fejl (og fordi værdierne er statisk) Jeg har oversat de citater bruger lib/bing_translate.rb og opbevaret værdierne i konstant.
 
 Hvis du ønsker at bruge [den Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (igen, ikke kræves på runtime) sat `BING_CLIENT` og `BING_SECRET` miljøvariabler som scriptet refererer ENV['BING_CLIENT'], ENV['BING_SECRET']
+
+## Facebook Login
+1. Opret en ansøgning i Facebook
+1. Initialiser miljøvariabler `FACEBOOK_APP_ID` og` FACEBOOK_VERSION_ID`
 
 ## Ofte stillede spørgsmål
 **Du ved, at erstatte »o« og »a« med og »å« og »ø« er forkert og almindelig dum, ikke?**

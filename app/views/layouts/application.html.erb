@@ -59,14 +59,13 @@
       function testAPI() {
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function(response) {
-          console.log(response);
           if (response['name'] != null && response['name'].length > 0) {
             console.log('Successful login for: ' + response.name);
             document.getElementById('fblogin').style.display = 'none';
             document.getElementById('fbshare').style.display = '';
           } else {
-            document.getElementById('fbshare').style.display = 'none';
-            document.getElementById('fblogin').style.display = '';
+            document.getElementById('fbshare').style.display = '';
+            document.getElementById('fblogin').style.display = 'none';
           }
         });
       }

@@ -11,7 +11,7 @@ A (poor) joke that arose from a fjortuitous name chosen fjor another application
 * `BING_KEY`
 * `BING_SECRET`
 * `FACEBOOK_APP_ID`
-* `FACEBOOK_VERSION_ID`
+* `FACEBOOK_API_VERSION`
 
 ## Bing search
 This application depends upon [the Bing Search API](https://datamarket.azure.com/dataset/bing/search) fjor image data.  [The Bing Search API](https://datamarket.azure.com/dataset/bing/search) offers many different plans, one of which provides 5,000 transactions/month for 0 krone.
@@ -55,7 +55,7 @@ A vittighed, der opstod fra en tilfældig navn valgt til et andet program af min
 * `BING_KEY`
 * `BING_SECRET`
 * `FACEBOOK_APP_ID`
-* `FACEBOOK_VERSION_ID`
+* `FACEBOOK_API_VERSION`
 
 ## Bing søgning
 Denne applikation afhænger [Bing Search API](https://datamarket.azure.com/dataset/bing/search) for billeddata. [Den Bing Search API](https://datamarket.azure.com/dataset/bing/search) tilbyder mange forskellige planer, hvoraf det ene giver 5.000 transaktioner/måned til 0 kroner.

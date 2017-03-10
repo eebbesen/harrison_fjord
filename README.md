@@ -30,7 +30,7 @@ If you want to use the [Bing Translate API](https://www.microsoft.com/en-us/tran
 1. Initialize environment variables `FACEBOOK_APP_ID` and `FACEBOOK_VERSION_ID`
 
 ## FAQ
-**You know that replacing 'o' and 'a' with and 'å' and ø' is wrong and plain stupid, right?**
+**You know that replacing 'a' and 'o' with and 'å' and 'ø' is wrong and plain stupid, right?**
 
 Yes, I understand that these are different letters.  No, you don't have to like it.
 
@@ -74,7 +74,7 @@ Hvis du ønsker at bruge [den Bing Translate API](https://www.microsoft.com/en-u
 1. Initialiser miljøvariabler `FACEBOOK_APP_ID` og` FACEBOOK_VERSION_ID`
 
 ## Ofte stillede spørgsmål
-**Du ved, at erstatte »o« og »a« med og »å« og »ø« er forkert og almindelig dum, ikke?**
+**Du ved, at erstatte »a« og »o« med og »å« og »ø« er forkert og almindelig dum, ikke?**
 
 Ja, jeg forstår, at der er forskellige bogstaver. Nej, du behøver ikke at kunne lide det.
 

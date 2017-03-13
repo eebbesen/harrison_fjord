@@ -87,3 +87,8 @@ IMDB: http://www.imdb.com/character/ch0000002/quotes.
 **Hvordan kan jeg bidrage til projektet?**
 
 Bord det, gøre dine mods, og indsende en pull anmodning.
+
+---
+🇸🇪
+
+Kommer snart!

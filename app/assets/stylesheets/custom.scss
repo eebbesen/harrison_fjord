@@ -70,38 +70,41 @@ img {
   position: relative;
 }
 
-#t1 {
-  background: rgb(210 , 16, 52);
-  width: 32.5%;
-  height: 100%;
-  position: absolute;
-}
-#t2 {
-  background: white;
-  width: 10.7%;
-  height: 100%;
-  left: 32.5%;
-  position: absolute;
-}
-#t3 {
-  background: rgb(210 , 16, 52);
-  color: rgb(210 , 16, 52);
-  width: 56.8%;
-  height: 100%;
-  position: absolute;
-  right: 0px;
-}
+.dansk {
+  #t1 {
+    background: rgb(210 , 16, 52);
+    width: 32.5%;
+    height: 100%;
+    position: absolute;
+  }
+  #t2 {
+    background: white;
+    width: 10.7%;
+    height: 100%;
+    left: 32.5%;
+    position: absolute;
+  }
+  #t3 {
+    background: rgb(210 , 16, 52);
+    color: rgb(210 , 16, 52);
+    width: 56.8%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+  }
 
-#middle {
-  background: white;
-  width: 100%;
-  height: 14.2%; 
-}
 
-#m1 {
-  background: white;
-  width: 100%;
-  height: 100%;
+  #middle {
+    background: white;
+    width: 100%;
+    height: 14.2%; 
+  }
+
+  #m1 {
+    background: white;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .wrapper, .flag {

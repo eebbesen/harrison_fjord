@@ -15,6 +15,8 @@
   padding: 10px;
   border: 10px;
   color: rgb(26, 85, 251);
+  position: relative;
+  z-index: 5;
   /* 216 0 243 1  neon purple */
   /* 143 26 251 */
 }
@@ -83,6 +85,7 @@ img {
 }
 #t3 {
   background: rgb(210 , 16, 52);
+  color: rgb(210 , 16, 52);
   width: 56.8%;
   height: 100%;
   position: absolute;
@@ -118,8 +121,58 @@ img {
 }
 
 .facebook {
-  z-index: 3;
+  z-index: 6;
   position: absolute;
   text-align: left;
   vertical-align: bottom;
+}
+
+/* Github ribbon from https://github.com/simonwhitaker/github-fork-ribbon-css */
+.github-fork-ribbon{
+  width:12.1em;
+  height:12.1em;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  pointer-events: none;
+  font-size: 13px;
+  text-decoration: none;
+  text-indent: -999999px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.github-fork-ribbon:hover::after {
+  visibility: visible;
+  color: rgb(252,223,43);
+}
+
+.github-fork-ribbon:before,.github-fork-ribbon:after{
+  position: absolute;
+  display: block;
+  width: 15.38em;
+  height: 1.54em;
+  top: 3.23em;
+  right: -3.23em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.github-fork-ribbon:before{
+  content: "";
+  padding: .38em 0;
+  background-color: inherit;
+  pointer-events: auto
+}
+.github-fork-ribbon:after{
+  content: attr(title);
+  line-height: 1.54em;
+  text-decoration: none;
+  text-align: center;
+  text-indent: 1em;
+  visibility: hidden;
 }

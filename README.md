@@ -21,7 +21,7 @@ You will need to set the `BING_KEY` environment variable as the code references 
 In an attempt to conserve calls and krone, two hundred images are cached after the server is started/restarted.
 
 ## Bing translate
-Because of frequent runtime API errors (and because the values are static) I've translated the quotes using lib/bing_translate.rb and stored the values in constant.
+Because of frequent runtime API errors (and because the values are static) I've translated the quotes using lib/bing_translate.rb and stored the values in a constant.
 
 If you want to use the [Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (again, not required at runtime) set `BING_CLIENT` and `BING_SECRET` environment variables as the script references `ENV['BING_CLIENT']`, `ENV['BING_SECRET']`
 

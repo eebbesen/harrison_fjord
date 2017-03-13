@@ -141,7 +141,11 @@ img {
   text-decoration: none;
   text-indent: -999999px;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  color: white;
+}
+
+.github-fork-ribbon:hover::after {
+  visibility: visible;
+  color: rgb(252,223,43);
 }
 
 .github-fork-ribbon:before,.github-fork-ribbon:after{
@@ -170,4 +174,5 @@ img {
   text-decoration: none;
   text-align: center;
   text-indent: 1em;
+  visibility: hidden;
 }

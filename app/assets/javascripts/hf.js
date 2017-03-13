@@ -1,8 +1,8 @@
 function toggleLang(){
   if (getLang() == 'dansk') {
-    changeLang('dansk', 'svensk');
+    changeLang('dansk', 'svenska');
   } else {
-    changeLang('svensk', 'dansk');
+    changeLang('svenska', 'dansk');
   }
 }
 
@@ -12,8 +12,8 @@ function getLang() {
 
   if (classList.contains('dansk')) {
     lang = 'dansk';
-  } else if (classList.contains('svensk')) {
-    lang = 'svensk';
+  } else if (classList.contains('svenska')) {
+    lang = 'svenska';
   }
 
   return lang;

@@ -1,8 +1,8 @@
 function toggleLang(){
   if (getLang() == 'dansk') {
-    changeLang('dansk', 'svensk');
+    changeLang('dansk', 'svenska');
   } else {
-    changeLang('svensk', 'dansk');
+    changeLang('svenska', 'dansk');
   }
 }
 
@@ -12,8 +12,8 @@ function getLang() {
 
   if (classList.contains('dansk')) {
     lang = 'dansk';
-  } else if (classList.contains('svensk')) {
-    lang = 'svensk';
+  } else if (classList.contains('svenska')) {
+    lang = 'svenska';
   }
 
   return lang;
@@ -24,6 +24,7 @@ function changeLang(fromLang, toLang){
   var fjork = document.getElementById('fjork');
   var omain = document.getElementById('omain');
   var toggle = document.getElementById('toggle');
+  var tr_quote = document.getElementById('tr_quote');
 
   flag.classList.remove(fromLang);
   flag.classList.add(toLang);
@@ -32,4 +33,9 @@ function changeLang(fromLang, toLang){
   omain.classList.remove(fromLang);
   omain.classList.add(toLang);
   toggle.innerHTML = fromLang;
+  if (toLang == 'dansk') {
+    tr_quote.innerHTML = dk_quote;
+  } else if (toLang == 'svenska') {
+    tr_quote.innerHTML = sv_quote;
+  }
 }

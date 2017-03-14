@@ -14,11 +14,20 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   # this can fail and things can be ok -- rerun and/or debug
-  test 'i_dansk' do
+  test '#i_dansk' do
     text = 'Haaaaaaaaaaaaaaaaaaaan Sooooooooooooooooooooooooooooooooooooooooooooooooloooo'
     lower = StaticPagesController.new.send(:i_dansk, text.downcase)
     assert lower.include?('å') && lower.include?('ø')
     upper = StaticPagesController.new.send(:i_dansk, text.upcase)
     assert upper.include?('Å') && upper.include?('Ø')
+  end
+
+  test '#lang default' do
+    assert_equal 'dansk', StaticPagesController.new.send(:language, nil)
+  end
+
+  test '#lang not default' do
+    c = StaticPagesController.new
+    assert_equal 'svensk', StaticPagesController.new.send(:language, 'svensk')
   end
 end

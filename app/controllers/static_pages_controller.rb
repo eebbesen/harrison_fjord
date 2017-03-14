@@ -8,12 +8,15 @@ class StaticPagesController < ApplicationController
     @image = picture
     lang = language params[:language]
 
+    @dk_quote = DANSKE_CITERE[text]
+    @sv_quote = SVENSKA_CITERE[text]
+
     if lang == 'dansk'
       @quote = i_dansk text
-      @tr_quote = DANSKE_CITERE[text]
+      @tr_quote = @dk_quote
     elsif lang == 'svenska'    
       @quote = i_svenska text
-      @tr_quote = SVENSKA_CITERE[text]
+      @tr_quote = @sv_quote
     end
   end
 

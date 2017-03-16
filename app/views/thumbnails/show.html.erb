@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="photos row">
+    <% @results.each do |result| %>
+      <a href="<%= result.keys.first %>"><img class="photo col" src="<%= result.values.first %>"/></a>
+    <% end %>
+  </div>
+</div>

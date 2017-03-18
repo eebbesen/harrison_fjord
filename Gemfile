@@ -28,6 +28,7 @@ gem 'bing-search'
 gem 'bing_translator'
 gem 'bootstrap-sass'
 gem 'newrelic_rpm'
+gem 'rollbar'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

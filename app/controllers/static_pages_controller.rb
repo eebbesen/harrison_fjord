@@ -20,7 +20,7 @@ class StaticPagesController < ApplicationController
     end
   end
 
-private
+  private
 
   # Bing Cognitive client
   def bing

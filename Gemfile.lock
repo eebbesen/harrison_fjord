@@ -44,7 +44,6 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.7.7)
       execjs
-    bing-search (2.0.0)
     bing_translator (4.6.0)
       json (~> 1.8.0)
       nokogiri (~> 1.6.0)
@@ -61,6 +60,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    cognitivebing (0.2.1)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.2)
     erubis (2.7.0)
@@ -196,11 +196,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bing-search
   bing_translator
   bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
+  cognitivebing
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

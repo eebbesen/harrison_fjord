@@ -20,7 +20,12 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  private
+private
+
+  # Bing Cognitive client
+  def bing
+    @bing ||= CognitiveBing.new(ENV['BING_KEY'])
+  end
 
   def quote
     DANSKE_CITERE.keys[Random.rand(DANSKE_CITERE.size - 1)]
@@ -38,10 +43,10 @@ class StaticPagesController < ApplicationController
   # get 200 images at a time -- gem or API wont' allow more than 50 per call
   def fetch_images
     puts 'fetching images from Bing'
-    BingSearch.account_key = ENV['BING_KEY']
     (0..3).map do |n|
-      BingSearch.image('Han Solo', offset: n * 50).map do |p|
-        { p.media_url => p.thumbnail.media_url }
+      bing.params = { count: 50, offset: n * 50 }
+      bing.search('Han Solo', 'image')[:value].map do |p|
+        { p[:contentUrl] => p[:thumbnailUrl] }
       end
     end.flatten
   end

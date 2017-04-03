@@ -1,3 +1,15 @@
+
+def httpc
+  @httpc ||= HTTPClient.new
+end
+
+# wade through redirects
+def resolve(url)
+  r = httpc.get(url)
+  a = r.header['location']
+  a.empty? ? url : a.first
+end
+
 bing = CognitiveBing.new(ENV['BING_KEY'])
 puts 'fetching images from Bing'
 start = Time.now
@@ -10,7 +22,7 @@ links = (0..3).map do |n|
 end.flatten
 
 links.each do |link|
-  Link.create(url: link.keys.first, thumbnail_url:link.values.first)
+  Link.create(url: resolve(link.keys.first), thumbnail_url: resolve(link.values.first))
 end
 
 puts "Persisted #{links.size} links in #{Time.now - start} seconds."

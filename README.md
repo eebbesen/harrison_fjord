@@ -14,7 +14,7 @@ A (poor) joke that arose from a fjortuitous name chosen fjor another application
 * `FACEBOOK_API_VERSION`
 
 ## Bing search
-This application depends upon [the Bing Search API](https://datamarket.azure.com/dataset/bing/search) fjor image data.  [The Bing Search API](https://datamarket.azure.com/dataset/bing/search) offers many different plans, one of which provides 5,000 transactions/month for 0 krone.
+This application depends upon [the Bing Cognitive Search API](https://datamarket.azure.com/dataset/bing/search) fjor image data.  [The Bing Search API](https://www.microsoft.com/cognitive-services/en-us/bing-image-search-api) offers many different plans, one of which provides 1,000 transactions/month for 0 krone for three months.
 
 You will need to set the `BING_KEY` environment variable as the code references `ENV['BING_KEY']`.
 

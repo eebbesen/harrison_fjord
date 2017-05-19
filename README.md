@@ -44,6 +44,14 @@ IMDB: http://www.imdb.com/character/ch0000002/quotes.
 
 Fjork it, make your mods, and submit a pull request.
 
+## Up and running
+### Populate the pictures
+In a console, execute lib/bing_links.rb
+
+### Run the application
+
+    bundle exec rails s
+
 ---
 🇩🇰
 

@@ -2,8 +2,8 @@
   var dk_quote = '<%= @dk_quote %>';
   var sv_quote = '<%= @sv_quote %>';
 </script>
-<div class="wrapper dansk" id="omain">
-  <div id="switch"><button type="button" class="btn btn-primary" onclick="toggleLang()" id="toggle">svenska</button></div>
+<div class="wrapper <%=@lang%>" id="omain">
+  <div id="switch"><button type="button" class="btn btn-primary" onclick="toggleLang()" id="toggle"><%=@alang%></button></div>
   <a id="fjork" class="github-fork-ribbon" href="https://github.com/eebbesen/harrison_fjord" title="Fjork me on GitHub"></a>
   <div class="citere quote" id="tr_quote">
     <%= @tr_quote %>
@@ -24,7 +24,7 @@
     <%= @quote %>
   </div>
 </div>
-<div id="flag" class="dansk">
+<div id="flag" class="<%=@lang%>">
   <div id="top">
     <div id="t1"></div>
     <div id="t2"></div>

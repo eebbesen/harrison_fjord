@@ -52,6 +52,11 @@ In a console, execute lib/bing_links.rb
 
     bundle exec rails s
 
+### About routes
+* root resolves to Danish
+* /dk resolves to Danish
+* /se resolves to Swedish
+
 ---
 🇩🇰
 

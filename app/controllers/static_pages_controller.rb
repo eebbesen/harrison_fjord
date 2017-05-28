@@ -6,17 +6,19 @@
   def han
     text = quote
     @image = picture
-    lang = language params[:language]
+    @lang = language params[:language]
 
     @dk_quote = DANSKE_CITERE[text]
     @sv_quote = SVENSKA_CITERE[text]
 
-    if lang == 'dansk'
+    if @lang == 'dansk'
       @quote = i_dansk text
       @tr_quote = @dk_quote
-    elsif lang == 'svenska'    
+      @alang = 'svenska'
+    elsif @lang == 'svenska'    
       @quote = i_svenska text
       @tr_quote = @sv_quote
+      @alang = 'dansk'
     end
   end
 

@@ -34,11 +34,14 @@
   end
 
   def picture
-    pictures[Random.rand(pictures.size - 1)].keys.first
+    ps = pictures.size - 1
+    ps = 1 if ps < 1
+    i = Random.rand(ps)
+    pictures[i].keys.first
   end
 
   def pictures
-    @@results ||= fetch_images
+    fetch_images
   end
 
   # expensive API call so use sparingly

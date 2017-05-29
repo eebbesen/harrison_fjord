@@ -2,13 +2,14 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test 'should get han' do
-    Link.create(url: 'https://fakeimages.com/pic1.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb1.jpg')
-    Link.create(url: 'https://fakeimages.com/pic2.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb2.jpg')
+    Link.create(id: 1, url: 'https://fakeimages.com/pic1.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb1.jpg')
+    Link.create(id: 2, url: 'https://fakeimages.com/pic2.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb2.jpg')
+
     get static_pages_han_url
 
     assert_response :success
     assert_select('img').each do |i|
-      assert_match /https:\/\/fakeimages\.com\/pic1\.jpg/, i.attributes['src'].value
+      assert ['1','2'].include? i.attributes['src'].value
     end
     assert_select('.quote').each do |q|
       assert !q.text.empty?

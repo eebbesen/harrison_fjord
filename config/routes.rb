@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'static_pages/han'
+  delete 'thumbnails/destroy'
   get 'thumbnails/show'
   get 't', to: 'thumbnails#show'
 

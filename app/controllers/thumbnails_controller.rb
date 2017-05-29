@@ -9,4 +9,16 @@ class ThumbnailsController < ApplicationController
     @results = StaticPagesController.new.send(:pictures)
     redirect_to t_url
   end
+
+  def destroy
+    byebug
+  end
+
+  def get
+    byebug
+  end
+
+  def post
+    byebug
+  end
 end

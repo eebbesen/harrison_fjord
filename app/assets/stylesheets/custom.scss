@@ -24,11 +24,18 @@
   /* 143 26 251 */
 }
 
+input {
+  border: 3px solid gold;
+}
+
+input:focus{
+  outline: none;
+}
+
 img {
   max-height: 75vh;
   max-width: 75vw;
   margin: auto;
-  border: 3px solid gold;
 }
 
 @media only screen and (max-height: 500px) {

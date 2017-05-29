@@ -43,8 +43,3 @@ function changeLang(fromLang, toLang){
 function selectImage(element){
   element.classList.toggle('selected');
 }
-
-function deletePictures(){
-  console.log('in delete');
-  console.log(document.getElementsByClassName('selected'));
-}

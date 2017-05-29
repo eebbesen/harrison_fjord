@@ -1,6 +1,10 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+.selected {
+  border-color: red;
+}
+
 .inner {
   max-height: 93vh;
   max-width: 93vw;
@@ -20,17 +24,20 @@
   /* 143 26 251 */
 }
 
-.image {
-  text-align: center;
-  max-height: 90vh;
-  max-width: 90vw;
-  margin: auto;
+.photo {
+  max-height: 100px;
+  margin: 1em;
+}
+
+.photos {
+  background-color: gold;
 }
 
 img {
   max-height: 75vh;
   max-width: 75vw;
   margin: auto;
+  border: 3px solid gold;
 }
 
 @media only screen and (max-height: 500px) {
@@ -258,13 +265,4 @@ img {
   text-align: center;
   text-indent: 1em;
   visibility: hidden;
-}
-
-.photo {
-  max-height: 100px;
-  margin: 1em;
-}
-
-.photos {
-  background-color: gold;
 }

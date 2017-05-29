@@ -1,7 +1,13 @@
-<div class="container">
-  <div class="photos row">
-    <% @results.each do |result| %>
-      <input type="image" id="<%=result.keys.first%>" class="photo col" src="<%= result.values.first %>" onclick="selectImage(this);"/>
-    <% end %>
+<%=form_tag(thumbnails_destroy_path, method: 'delete') do %>
+  <input type='hidden' name='markedForDelete' id='markedForDelete' value='-1'></input>
+  <div class="container">
+    <div class='deletebutton'>
+      <input type='submit' value='Delete'>
+    </div>
+    <div class="photos row">
+      <% @results.each do |result| %>
+        <img id="<%=result.keys.first%>" class="photo col" src="<%= result.values.first %>" onclick="selectImage(this);"/>
+      <% end %>
+    </div>
   </div>
-</div>
+<%end%>

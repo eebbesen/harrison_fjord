@@ -39,3 +39,7 @@ function changeLang(fromLang, toLang){
     tr_quote.innerHTML = sv_quote;
   }
 }
+
+function selectImage(element){
+  element.classList.toggle('selected');
+}

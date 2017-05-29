@@ -1,6 +1,10 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+.selected {
+  border: 3px solid red;
+}
+
 .inner {
   max-height: 93vh;
   max-width: 93vw;
@@ -20,11 +24,12 @@
   /* 143 26 251 */
 }
 
-.image {
-  text-align: center;
-  max-height: 90vh;
-  max-width: 90vw;
-  margin: auto;
+input {
+  border: 3px solid gold;
+}
+
+input:focus{
+  outline: none;
 }
 
 img {

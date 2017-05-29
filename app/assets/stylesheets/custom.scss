@@ -2,7 +2,7 @@
 @import 'bootstrap';
 
 .selected {
-  border-color: red;
+  border: 3px solid red;
 }
 
 .inner {
@@ -24,20 +24,18 @@
   /* 143 26 251 */
 }
 
-.photo {
-  max-height: 100px;
-  margin: 1em;
+input {
+  border: 3px solid gold;
 }
 
-.photos {
-  background-color: gold;
+input:focus{
+  outline: none;
 }
 
 img {
   max-height: 75vh;
   max-width: 75vw;
   margin: auto;
-  border: 3px solid gold;
 }
 
 @media only screen and (max-height: 500px) {
@@ -265,4 +263,13 @@ img {
   text-align: center;
   text-indent: 1em;
   visibility: hidden;
+}
+
+.photo {
+  max-height: 100px;
+  margin: 1em;
+}
+
+.photos {
+  background-color: gold;
 }

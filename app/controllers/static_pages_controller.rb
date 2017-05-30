@@ -48,7 +48,7 @@
   # get 200 images at a time -- gem or API wont' allow more than 50 per call
   def fetch_images
     Link.all.map do |link|
-      {link.id => link.thumbnail_url}
+      {link.url => link.thumbnail_url}
     end
   end
 

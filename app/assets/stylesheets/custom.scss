@@ -6,19 +6,14 @@
 }
 
 .deletebutton {
-  text-align: center;
-  margin-top: 15px;
+ text-align: center;
+ margin-top: 12px;
 }
 
 .inner {
   max-height: 93vh;
   max-width: 93vw;
   margin: auto;
-}
-
-.photo {
-  max-height: 100px;
-  margin: 1em;
 }
 
 .quote {
@@ -32,6 +27,11 @@
   z-index: 5;
   /* 216 0 243 1  neon purple */
   /* 143 26 251 */
+}
+
+.photo {
+  max-height: 100px;
+  margin: 1em;
 }
 
 .selected {

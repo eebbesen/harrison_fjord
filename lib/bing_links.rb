@@ -26,4 +26,3 @@ links.each do |link|
 end
 
 puts "Persisted #{links.size} links in #{Time.now - start} seconds."
-

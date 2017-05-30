@@ -6,7 +6,7 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
     Link.create(url: 'https://fakeimages.com/pic2.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb2.jpg')
     Link.create(url: 'https://fakeimages.com/pic2.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb3.jpg')
 
-    delete thumbnails_destroy_path, { markedForDelete: '-1,1,3' }
+    delete thumbnails_destroy_path, markedForDelete: '-1,1,3'
 
     assert_response :redirect
     assert_redirected_to t_path
@@ -18,7 +18,7 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
     Link.create(url: 'https://fakeimages.com/pic2.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb2.jpg')
     Link.create(url: 'https://fakeimages.com/pic2.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb3.jpg')
 
-    delete thumbnails_destroy_path, { markedForDelete: '-1' }
+    delete thumbnails_destroy_path, markedForDelete: '-1'
 
     assert_response :redirect
     assert_redirected_to t_path

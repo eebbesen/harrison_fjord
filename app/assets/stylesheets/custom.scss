@@ -10,6 +10,10 @@
  margin-top: 12px;
 }
 
+.image {
+  text-align: center;
+}
+
 .inner {
   max-height: 93vh;
   max-width: 93vw;
@@ -34,14 +38,17 @@
   margin: 1em;
 }
 
-.selected {
+img {
+  margin: auto;
+  max-height: 75vw;
+  max-width: 75vw;
+}
+
+div.photos img.selected {
   border-color: red;
 }
 
-img {
-  max-height: 75vh;
-  max-width: 75vw;
-  margin: auto;
+div.photos img {
   border: 3px solid gold;
 }
 

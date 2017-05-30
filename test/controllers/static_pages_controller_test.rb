@@ -9,7 +9,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select('img').each do |i|
-      assert ['1','2'].include? i.attributes['src'].value
+      assert %w[https://fakeimages.com/pic1.jpg https://fakeimages.com/pic2.jpg].include? i.attributes['src'].value
     end
     assert_select('.quote').each do |q|
       assert !q.text.empty?
@@ -18,7 +18,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   # this can fail and things can be ok -- rerun and/or debug
   test '#i_dansk' do
-    text = 'Haaaaaaaaaaaaaaaaaaaan Sooooooooooooooooooooooooooooooooooooooooooooooooloooo'
+    text = 'Haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaan Sooooooooooooooooooooooooooooooooooooooooooooooooloooo'
     lower = StaticPagesController.new.send(:i_dansk, text.downcase)
     assert lower.include?('å') && lower.include?('ø')
     upper = StaticPagesController.new.send(:i_dansk, text.upcase)

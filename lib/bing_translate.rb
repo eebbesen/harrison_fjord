@@ -7,7 +7,7 @@ res = {}
 errors = 0
 start = Time.now
 
-while qq.size > 0
+until qq.empty?
   sleep 7
   q = qq.last
   begin
@@ -25,4 +25,3 @@ while qq.size > 0
 end
 
 puts "Translated #{res.size} values with #{errors.size} errors in #{Time.now - start} seconds."
-

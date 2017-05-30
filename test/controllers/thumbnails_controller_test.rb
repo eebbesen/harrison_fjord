@@ -8,7 +8,8 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
 
     delete thumbnails_destroy_path, { markedForDelete: '-1,1,3' }
 
-    assert_response :success
+    assert_response :redirect
+    assert_redirected_to t_path
     assert_equal 1, Link.count
     assert_equal 2, Link.all.first.id
   end
@@ -19,7 +20,8 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
 
     delete thumbnails_destroy_path, { markedForDelete: '-1' }
 
-    assert_response :success
+    assert_response :redirect
+    assert_redirected_to t_path
     assert_equal 3, Link.count
   end
 end

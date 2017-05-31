@@ -23,6 +23,19 @@
   margin: auto;
 }
 
+.photo {
+  max-height: 100px;
+  margin: 1em;
+}
+
+div.photos img.selected {
+  border-color: red;
+}
+
+div.photos img {
+  border: 3px solid gold;
+}
+
 .quote {
   text-align: center;
   font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -36,24 +49,10 @@
   /* 143 26 251 */
 }
 
-.photo {
-  max-height: 100px;
-  margin: 1em;
-}
-
 img {
-  margin: auto;
-  max-height: 75vw;
+  max-height: 75vh;
   max-width: 75vw;
-  max-height: 700px;
-}
-
-div.photos img.selected {
-  border-color: red;
-}
-
-div.photos img {
-  border: 3px solid gold;
+  margin: auto;
 }
 
 @media only screen and (max-height: 500px) {

@@ -6,7 +6,7 @@
     </div>
     <div class="photos row">
       <% @results.each do |result| %>
-        <img id="<%=result.keys.first%>" class="photo col" src="<%= result.values.first %>" onclick="selectImage(this);"/>
+        <img id="<%=result.id%>" class="photo col" src="<%= result.thumbnail_url %>" onclick="selectImage(this);"/>
       <% end %>
     </div>
   </div>

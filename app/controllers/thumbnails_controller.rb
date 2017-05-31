@@ -1,6 +1,6 @@
 class ThumbnailsController < ApplicationController
   def show
-    @results = StaticPagesController.new.send(:pictures)
+    @results = Link.all
   end
 
   def destroy

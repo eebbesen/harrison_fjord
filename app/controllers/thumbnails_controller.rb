@@ -1,6 +1,6 @@
 class ThumbnailsController < ApplicationController
   def show
-    @results = Link.all
+    @results = Link.all.order(:url)
   end
 
   def destroy

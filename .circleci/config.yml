@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.3-browsers
+    steps:
+      - checkout
+      - run:
+          name: bundle_install
+          command: gem install bundler; bundle install
+      - run:
+          name: run_test
+          command: bundle exec rake

@@ -14,7 +14,7 @@ until qq.empty?
     k = q[0]
     res[k] = t.translate(k, from: 'en', to: 'sv')
     puts "translated: #{k}"
-  rescue => ex
+  rescue StandardError => ex
     puts "#{k}: #{ex.message}"
     errors += 1
     sleep 7

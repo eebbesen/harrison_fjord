@@ -1,4 +1,3 @@
-
 def httpc
   @httpc ||= HTTPClient.new
 end

@@ -29,6 +29,7 @@ gem 'cognitivebing'
 gem 'httpclient'
 gem 'newrelic_rpm'
 gem 'rollbar'
+gem 'therubyracer'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

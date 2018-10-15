@@ -5,30 +5,37 @@
 <body>
   <style>
     html {
-      max-height:100%;
-      background-color: red;
+      max-height: 100%;
+      background-color: rgb(210 , 16, 52);
     }
     body {
       margin: 0;
     }
     .container {
       display: grid;
-      grid-template-columns: 3fr 5fr;
-      grid-template-rows: 40vh 40vh;
-      /*grid-auto-rows: minmax(40vh, 45ch);*/
-      grid-gap: 11vw;
-      background-color: white;
+      grid-template-columns: 3fr 1fr 5fr;
+      grid-template-rows: 40vh 20vh 40vh;
       margin: 0;
+      min-height: 100%;
     }
     .cell {
-      background: red;
+      background: rgb(210 , 16, 52);
+    }
+    .mid {
+      background: white;
+    }
+    #hmiddle {
+      grid-column: 1 / 4;
     }
   </style>
 	<div class="container">
-      <div class="cell" id="top-left"></div>
-      <div class="cell" id="top-right"></div>
-      <div class="cell" id="bottom-left"></div>
-      <div class="cell" id="bottom-right"></div>
+      <div class="cell"/></div>
+      <div class="cell mid" id="tvmiddle"></div>
+      <div class="cell"></div>
+      <div class="cell mid" id="hmiddle"></div>
+      <div class="cell"></div>
+      <div class="cell mid" id="bvmiddle"></div>
+      <div class="cell"></div>
 	</div>
 </body>
 </html>

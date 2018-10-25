@@ -25,8 +25,21 @@ links = parsed_json['value'].map do |p|
   { p['contentUrl'] => p['thumbnailUrl'] }
 end
 
-links.each do |link|
-  Link.create(url: link.keys.first, thumbnail_url: link.values.first)
+ActiveRecord::Base.transaction do
+  links.each do |link|
+    u = URI(link.keys.first)
+    req = Net::HTTP::Get.new(uri)
+    begin
+      res = Net::HTTP.start(u.host, u.port, use_ssl: u.scheme == 'https', read_timeout: 10 ) do |http|
+        http.request(req)
+      end
+      next if res.code.start_with? '4'
+    rescue StandardError => err
+      puts "Error #{err} for #{link}"
+      next
+    end
+    Link.create(url: link.keys.first, thumbnail_url: link.values.first)
+  end
 end
 
 puts "Persisted #{links.size} links in #{Time.now - start} seconds."

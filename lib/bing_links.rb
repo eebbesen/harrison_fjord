@@ -26,7 +26,6 @@ links = parsed_json['value'].map do |p|
 end
 
 links.each do |link|
-  # Link.create(url: resolve(link.keys.first), thumbnail_url: resolve(link.values.first))
   Link.create(url: link.keys.first, thumbnail_url: link.values.first)
 end
 

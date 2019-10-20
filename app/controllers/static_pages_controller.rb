@@ -34,6 +34,7 @@ class StaticPagesController < ApplicationController
   end
 
   def picture
+    return nil if pictures.size < 1
     ps = pictures.size - 1
     ps = 1 if ps < 1
     i = Random.rand(ps)

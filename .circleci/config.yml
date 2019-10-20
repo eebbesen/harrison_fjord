@@ -2,12 +2,21 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.3-browsers
+      - image: circleci/ruby:2.6.3-stretch-node
     steps:
       - checkout
       - run:
           name: bundle_install
           command: gem install bundler; bundle install
+      - run:
+          name: Yarn Install
+          command: yarn install --cache-folder ~/.cache/yarn
+      - run:
+          name: run_yarn
+          command: yarn
+      - run:
+          name: run_webpack
+          command: bin/rails assets:precompile
       - run:
           name: run_test
           command: bundle exec rake

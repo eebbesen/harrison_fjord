@@ -36,7 +36,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test '#lang not default' do
-    c = StaticPagesController.new
     assert_equal 'svensk', StaticPagesController.new.send(:language, 'svensk')
+  end
+
+  test '#pictures with no pics' do
+    assert_nil StaticPagesController.new.send(:picture)
   end
 end

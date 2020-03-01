@@ -53,6 +53,7 @@ load 'lib/bing_links.rb'
 
 ### Run the application
 
+    bin/rails webpacker:compile
     bundle exec rails s
 
 ### About routes

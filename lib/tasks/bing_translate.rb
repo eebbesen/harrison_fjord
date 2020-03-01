@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Getting frequent BingTranslator::Exception ((s:Client) TranslateApiException: Cannot find an active Azure Market Place Translator Subscription associated with the request credentials. : ID=0824.V2_Soap.Translate.51F893D7)
 # so not calling per request
 
@@ -14,8 +16,8 @@ until qq.empty?
     k = q[0]
     res[k] = t.translate(k, from: 'en', to: 'sv')
     puts "translated: #{k}"
-  rescue StandardError => ex
-    puts "#{k}: #{ex.message}"
+  rescue StandardError => e
+    puts "#{k}: #{e.message}"
     errors += 1
     sleep 7
     retry

@@ -64,3 +64,5 @@ function manipulateDeletionArray(id){
 
   element.value = arr.join(',');
 }
+
+document.getElementById('toggle').onclick=toggleLang

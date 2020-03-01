@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ThumbnailsController < ApplicationController
   def show
     @results = Link.all.order(:url)

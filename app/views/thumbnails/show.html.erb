@@ -6,8 +6,9 @@
     </div>
     <div class="photos row">
       <% @results.each do |result| %>
-        <img id="<%=result.id%>" class="photo col" src="<%= result.thumbnail_url %>" onclick="selectImage(this);"/>
+        <img id="<%=result.id%>" class="photo col" src="<%= result.thumbnail_url %>"/>
       <% end %>
     </div>
   </div>
-<%end%>
+<% end %>
+<%= javascript_pack_tag 'images' %>

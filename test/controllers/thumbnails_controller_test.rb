@@ -10,9 +10,9 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should retrieve pictures' do
-    exp1 = '<img id="1" class="photo col" src="https://fakeimages.com/pic_thumb1.jpg" onclick="selectImage(this);"/>'
-    exp2 = '<img id="2" class="photo col" src="https://fakeimages.com/pic_thumb2.jpg" onclick="selectImage(this);"/>'
-    exp3 = '<img id="3" class="photo col" src="https://fakeimages.com/pic_thumb3.jpg" onclick="selectImage(this);"/>'
+    exp1 = '<img id="1" class="photo col" src="https://fakeimages.com/pic_thumb1.jpg"/>'
+    exp2 = '<img id="2" class="photo col" src="https://fakeimages.com/pic_thumb2.jpg"/>'
+    exp3 = '<img id="3" class="photo col" src="https://fakeimages.com/pic_thumb3.jpg"/>'
 
     get t_path
 

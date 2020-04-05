@@ -53,8 +53,13 @@ load 'lib/bing_links.rb'
 
 ### Run the application
 
+    yarn install --check-files
     bin/rails webpacker:compile
-    bundle exec rails s
+    bin/rails s
+
+### Test the application
+
+    bin/rake
 
 ### About routes
 * root resolves to Danish

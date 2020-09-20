@@ -2,6 +2,8 @@
   "name": "hf_6",
   "private": true,
   "dependencies": {
+    "node": "=14.11.0",
+    "npm": "6.14.8",
     "node-forge": ">=0.10.0",
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",

@@ -19,4 +19,4 @@ jobs:
           command: bin/rails assets:precompile
       - run:
           name: run_test
-          command: bundle exec rake
+          command: bin/rails webpacker:compile; bundle exec rake

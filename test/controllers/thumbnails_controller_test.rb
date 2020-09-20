@@ -26,7 +26,7 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
     get t_path
 
     assert_response :success
-    assert_match /pic_thumb1.*pic_thumb2.*pic_thumb4.*pic_thumb3/m, response.body
+    assert_match(/pic_thumb1.*pic_thumb2.*pic_thumb4.*pic_thumb3/m, response.body)
   end
 
   test 'should delete selected links' do

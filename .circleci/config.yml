@@ -16,7 +16,7 @@ jobs:
           command: gem install bundler; bundle install
 
       - type: cache-save
-        key: v1-dependencies-bundler-{ { checksum "Gemfile.lock" }}
+        key: v1-dependencies-bundler-{{ checksum "Gemfile.lock" }}
         paths:
           - vendor/bundle
 

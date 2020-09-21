@@ -19,7 +19,7 @@ jobs:
       - save_cache:
           key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
-            - .bundle
+            - ~/.bundle
 
       - restore_cache:
           keys:

@@ -16,7 +16,7 @@ jobs:
           command: yarn
       - run:
           name: run_webpack
-          command: bin/rails assets:precompile
+          command: bin/rails webpacker:compile; bin/rails assets:precompile
       - run:
           name: run_test
           command: bundle exec rake

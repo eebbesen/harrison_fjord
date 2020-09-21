@@ -1,0 +1,10 @@
+# https://github.com/travis-ci/travis-ci/wiki/.travis.yml-options
+language: "ruby"
+script: "bundle exec rake --trace"
+rvm:
+  - 2.0
+  - 2.1
+  - 2.2
+  - jruby
+notifications:
+  irc: "irc.freenode.org#savon"

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="NotificationBrokerService"
+	targetNamespace="http://docs.oasis-open.org/wsn/brw-2"
+	xmlns:tns="http://docs.oasis-open.org/wsn/brw-2"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:ns1="http://docs.oasis-open.org/wsn/brw-2">
+
+<wsdl:import namespace="http://docs.oasis-open.org/wsn/brw-2" location="http://docs.oasis-open.org/wsn/brw-2.wsdl"/>
+
+  <wsdl:binding name="NotificationBrokerSoapBinding" type="ns1:NotificationBroker">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Notify">
+      <soap12:operation soapAction="" soapActionRequired="false" style="document"/>
+      <wsdl:input name="Notify">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentMessage">
+      <soap12:operation soapAction="" soapActionRequired="false" style="document"/>
+      <wsdl:input name="GetCurrentMessageRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetCurrentMessageResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="TopicNotSupportedFault">
+        <soap12:fault name="TopicNotSupportedFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="TopicExpressionDialectUnknownFault">
+        <soap12:fault name="TopicExpressionDialectUnknownFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="MultipleTopicsSpecifiedFault">
+        <soap12:fault name="MultipleTopicsSpecifiedFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidTopicExpressionFault">
+        <soap12:fault name="InvalidTopicExpressionFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ResourceUnknownFault">
+        <soap12:fault name="ResourceUnknownFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NoCurrentMessageOnTopicFault">
+        <soap12:fault name="NoCurrentMessageOnTopicFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterPublisher">
+      <soap12:operation soapAction="" soapActionRequired="false" style="document"/>
+      <wsdl:input name="RegisterPublisherRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RegisterPublisherResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="TopicNotSupportedFault">
+        <soap12:fault name="TopicNotSupportedFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="PublisherRegistrationFailedFault">
+        <soap12:fault name="PublisherRegistrationFailedFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnacceptableInitialTerminationTimeFault">
+        <soap12:fault name="UnacceptableInitialTerminationTimeFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidTopicExpressionFault">
+        <soap12:fault name="InvalidTopicExpressionFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ResourceUnknownFault">
+        <soap12:fault name="ResourceUnknownFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="PublisherRegistrationRejectedFault">
+        <soap12:fault name="PublisherRegistrationRejectedFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Subscribe">
+      <soap12:operation soapAction="" soapActionRequired="false" style="document"/>
+      <wsdl:input name="SubscribeRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SubscribeResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="TopicNotSupportedFault">
+        <soap12:fault name="TopicNotSupportedFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidFilterFault">
+        <soap12:fault name="InvalidFilterFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="TopicExpressionDialectUnknownFault">
+        <soap12:fault name="TopicExpressionDialectUnknownFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnacceptableInitialTerminationTimeFault">
+        <soap12:fault name="UnacceptableInitialTerminationTimeFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SubscribeCreationFailedFault">
+        <soap12:fault name="SubscribeCreationFailedFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidMessageContentExpressionFault">
+        <soap12:fault name="InvalidMessageContentExpressionFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidTopicExpressionFault">
+        <soap12:fault name="InvalidTopicExpressionFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnrecognizedPolicyRequestFault">
+        <soap12:fault name="UnrecognizedPolicyRequestFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ResourceUnknownFault">
+        <soap12:fault name="ResourceUnknownFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="UnsupportedPolicyRequestFault">
+        <soap12:fault name="UnsupportedPolicyRequestFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotifyMessageNotSupportedFault">
+        <soap12:fault name="NotifyMessageNotSupportedFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="InvalidProducerPropertiesExpressionFault">
+        <soap12:fault name="InvalidProducerPropertiesExpressionFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="NotificationBrokerService">
+    <wsdl:port binding="tns:NotificationBrokerSoapBinding" name="NotificationBrokerPort">
+      <soap12:address location="http://192.70.89.113:9000/wsn/NotificationBroker"/>
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>

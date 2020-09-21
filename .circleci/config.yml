@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache_rails:
+      - restore_cache:
           keys:
             - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - gem-cache-v1-{{ arch }}-{{ .Branch }}
@@ -16,13 +16,13 @@ jobs:
           name: bundle_install
           command: gem install bundler; bundle install
 
-      - save_cache_rails:
+      - save_cache:
           key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - .bundle
 
 
-      - restore_cache_js:
+      - restore_cache:
           keys:
             - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
             - yarn-packages-v1-{{ .Branch }}-
@@ -32,7 +32,7 @@ jobs:
           name: Yarn Install
           command: yarn install --cache-folder ~/.cache/yarn
 
-      - save_cache_js:
+      - save_cache:
           paths:
             - ~/.cache/yarn
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}

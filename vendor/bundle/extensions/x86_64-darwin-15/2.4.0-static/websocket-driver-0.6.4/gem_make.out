@@ -1,0 +1,15 @@
+current directory: /Users/eebbesen/proj3/harrison_fjord/vendor/bundle/gems/websocket-driver-0.6.4/ext/websocket-driver
+/Users/eebbesen/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20170312-2307-1h3zxmg.rb extconf.rb 
+creating Makefile
+
+current directory: /Users/eebbesen/proj3/harrison_fjord/vendor/bundle/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/eebbesen/proj3/harrison_fjord/vendor/bundle/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/eebbesen/proj3/harrison_fjord/vendor/bundle/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20170312-2307-ftgog

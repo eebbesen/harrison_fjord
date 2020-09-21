@@ -14,12 +14,12 @@ jobs:
 
       - run:
           name: bundle_install
-          command: gem install bundler; bundle check || bundle install
+          command: gem install bundler; bundle check || bundle install --path vendor/bundle
 
       - save_cache:
           key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
-            - .bundle
+            - vendor/bundle
 
 
       - restore_cache:

@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - 'bin/bundle'
+    - 'bin/update'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+
+  NewCops: enable
+
+Style/Documentation:
+  Exclude:
+    - 'db/migrate/**/*'

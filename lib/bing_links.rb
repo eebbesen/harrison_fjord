@@ -13,7 +13,7 @@ start = Time.now
 uri  = 'https://api.cognitive.microsoft.com'
 path = '/bing/v7.0/images/search'
 term = 'han solo'
-uri = URI(uri + path + '?q=' + URI.escape(term) + '&count=100')
+uri = URI("#{uri}#{path}?q=#{CGI.escape(term)}&count=100")
 request = Net::HTTP::Get.new(uri)
 request['Ocp-Apim-Subscription-Key'] = ENV['BING_KEY']
 

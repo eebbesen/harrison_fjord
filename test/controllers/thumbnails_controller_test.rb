@@ -29,8 +29,9 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
     assert_match /pic_thumb1.*pic_thumb2.*pic_thumb4.*pic_thumb3/m, response.body
   end
 
-  test 'should delete selected links' do
-    delete thumbnails_destroy_path, params: { markedForDelete: '-1,1,3' }
+  test 'should delete selected links with valid delete key' do
+    ENV['DELETE_KEY'] = 'deletedelete'
+    delete thumbnails_destroy_path, params: { markedForDelete: '-1,1,3' , deleteKey: 'deletedelete'}
 
     assert_response :redirect
     assert_redirected_to t_path
@@ -38,8 +39,16 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
     assert_equal 2, Link.all.first.id
   end
 
+  test 'should not delete selected links without valid delete key' do
+    delete thumbnails_destroy_path, params: { markedForDelete: '-8' }
+
+    assert_response :no_content
+    assert_equal 3, Link.count
+  end
+
   test 'should noop when nothing selected' do
-    delete thumbnails_destroy_path, params: { markedForDelete: '-1' }
+    ENV['DELETE_KEY'] = 'deletedelete'
+    delete thumbnails_destroy_path, params: { markedForDelete: '-1' , deleteKey: 'deletedelete'}
 
     assert_response :redirect
     assert_redirected_to t_path

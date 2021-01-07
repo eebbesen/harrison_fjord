@@ -60,6 +60,8 @@ load 'lib/bing_links.rb'
 
 ### Test the application
 
+    bin/rails db:create # one-time only
+    bin/rails db:setup # as needed
     bin/rake
 
 ### About routes

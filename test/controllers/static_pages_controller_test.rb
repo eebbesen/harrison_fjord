@@ -2,6 +2,7 @@
 
 require 'test_helper'
 
+##
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test 'should get han' do
     Link.create(id: 1, url: 'https://fakeimages.com/pic1.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb1.jpg')

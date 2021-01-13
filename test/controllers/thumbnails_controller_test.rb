@@ -2,6 +2,7 @@
 
 require 'test_helper'
 
+##
 class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
   setup do
     Link.create(id: 1, url: 'https://fakeimages.com/pic1.jpg', thumbnail_url: 'https://fakeimages.com/pic_thumb1.jpg')
@@ -26,12 +27,12 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
     get t_path
 
     assert_response :success
-    assert_match /pic_thumb1.*pic_thumb2.*pic_thumb4.*pic_thumb3/m, response.body
+    assert_match(/pic_thumb1.*pic_thumb2.*pic_thumb4.*pic_thumb3/m, response.body)
   end
 
   test 'should delete selected links with valid delete key' do
     ENV['DELETE_KEY'] = 'deletedelete'
-    delete thumbnails_destroy_path, params: { markedForDelete: '-1,1,3' , deleteKey: 'deletedelete'}
+    delete thumbnails_destroy_path, params: { markedForDelete: '-1,1,3', deleteKey: 'deletedelete' }
 
     assert_response :redirect
     assert_redirected_to t_path
@@ -48,7 +49,7 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should noop when nothing selected' do
     ENV['DELETE_KEY'] = 'deletedelete'
-    delete thumbnails_destroy_path, params: { markedForDelete: '-1' , deleteKey: 'deletedelete'}
+    delete thumbnails_destroy_path, params: { markedForDelete: '-1', deleteKey: 'deletedelete' }
 
     assert_response :redirect
     assert_redirected_to t_path

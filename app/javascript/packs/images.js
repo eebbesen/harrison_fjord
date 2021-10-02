@@ -30,3 +30,5 @@ for (pic of pics) {
     selectImage(this);
   })
 }
+
+

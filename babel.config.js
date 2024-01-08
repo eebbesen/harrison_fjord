@@ -48,7 +48,7 @@ module.exports = function(api) {
         }
       ],
       [
-        require('@babel/plugin-object-rest-spread').default,
+        require('@babel/plugin-proposal-object-rest-spread').default,
         {
           useBuiltIns: true
         }

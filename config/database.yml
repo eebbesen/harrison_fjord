@@ -22,7 +22,6 @@ test:
 
 production:
   adapter: postgres
-  database: hf
   database: <%= ENV["HF_DATABASE_NAME"] %>
   username: <%= ENV["HF_DATABASE_USERNAME"] %>
   password: <%= ENV["HF_DATABASE_PASSWORD"] %>

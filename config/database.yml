@@ -21,5 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgres
+  database: hf
+  database: <%= ENV["HF_DATABASE_NAME"] %>
+  username: <%= ENV["HF_DATABASE_USERNAME"] %>
+  password: <%= ENV["HF_DATABASE_PASSWORD"] %>
+  host: <%= ENV["HF_DATABASE_HOST"] %>
+

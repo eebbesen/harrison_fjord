@@ -36,8 +36,7 @@ gem 'cognitivebing'
 gem 'nokogiri'
 
 group :production do
-  # gem 'pg'
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 group :development, :test do

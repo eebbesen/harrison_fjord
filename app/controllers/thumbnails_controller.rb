@@ -3,7 +3,7 @@
 ##
 class ThumbnailsController < ApplicationController
   def show
-    @results = Link.all.order(:url)
+    @results = Link.order(:url)
     @dk = params['dk']
   end
 

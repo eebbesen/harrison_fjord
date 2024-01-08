@@ -15,7 +15,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
       assert %w[https://fakeimages.com/pic1.jpg https://fakeimages.com/pic2.jpg].include? i.attributes['src'].value
     end
     assert_select('.quote').each do |q|
-      assert !q.text.empty?
+      assert_not q.text.empty?
     end
   end
 

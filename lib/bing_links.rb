@@ -7,15 +7,15 @@ require 'uri'
 require_relative '../app/models/application_record'
 require_relative '../app/models/link'
 
-puts 'fetching images from Bing'
-start = Time.now
+Rails.logger.debug 'fetching images from Bing'
+start = Time.zone.now
 
 uri  = 'https://api.cognitive.microsoft.com'
 path = '/bing/v7.0/images/search'
 term = 'han solo'
 uri = URI("#{uri}#{path}?q=#{CGI.escape(term)}&count=100")
 request = Net::HTTP::Get.new(uri)
-request['Ocp-Apim-Subscription-Key'] = ENV['BING_KEY']
+request['Ocp-Apim-Subscription-Key'] = ENV.fetch('BING_KEY', nil)
 
 response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
   http.request(request)
@@ -37,11 +37,11 @@ ActiveRecord::Base.transaction do
       end
       next if res.code.start_with? '4'
     rescue StandardError => e
-      puts "Error #{e} for #{link}"
+      Rails.logger.debug { "Error #{e} for #{link}" }
       next
     end
     Link.create(url: link.keys.first, thumbnail_url: link.values.first)
   end
 end
 
-puts "Persisted #{links.size} links in #{Time.now - start} seconds."
+Rails.logger.debug { "Persisted #{links.size} links in #{Time.zone.now - start} seconds." }

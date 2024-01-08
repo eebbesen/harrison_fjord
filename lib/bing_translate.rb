@@ -3,11 +3,11 @@
 # Getting frequent BingTranslator::Exception ((s:Client) TranslateApiException: Cannot find an active Azure Market Place Translator Subscription associated with the request credentials. : ID=0824.V2_Soap.Translate.51F893D7)
 # so not calling per request
 
-t = BingTranslator.new(ENV['BING_CLIENT'], ENV['BING_SECRET'], false, ENV['BING_KEY'])
+t = BingTranslator.new(ENV.fetch('BING_CLIENT', nil), ENV.fetch('BING_SECRET', nil), false, ENV.fetch('BING_KEY', nil))
 qq = StaticPagesController::DANSKE_CITERE.map { |q| q }
 res = {}
 errors = 0
-start = Time.now
+start = Time.zone.now
 
 until qq.empty?
   sleep 7
@@ -15,9 +15,9 @@ until qq.empty?
   begin
     k = q[0]
     res[k] = t.translate(k, from: 'en', to: 'sv')
-    puts "translated: #{k}"
+    Rails.logger.debug { "translated: #{k}" }
   rescue StandardError => e
-    puts "#{k}: #{e.message}"
+    Rails.logger.debug { "#{k}: #{e.message}" }
     errors += 1
     sleep 7
     retry
@@ -26,4 +26,4 @@ until qq.empty?
   sleep 7
 end
 
-puts "Translated #{res.size} values with #{errors.size} errors in #{Time.now - start} seconds."
+Rails.logger.debug { "Translated #{res.size} values with #{errors.size} errors in #{Time.zone.now - start} seconds." }

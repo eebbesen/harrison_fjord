@@ -34,7 +34,7 @@ class StaticPagesController < ApplicationController
 
   # Bing Cognitive client
   def bing
-    @bing ||= CognitiveBing.new(ENV['BING_KEY'])
+    @bing ||= CognitiveBing.new(ENV.fetch('BING_KEY', nil))
   end
 
   def quote

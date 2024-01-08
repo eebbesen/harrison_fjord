@@ -37,7 +37,7 @@ class ThumbnailsControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     assert_redirected_to t_path
     assert_equal 1, Link.count
-    assert_equal 2, Link.all.first.id
+    assert_equal 2, Link.first.id
   end
 
   test 'should not delete selected links without valid delete key' do

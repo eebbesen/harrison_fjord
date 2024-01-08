@@ -36,13 +36,14 @@ gem 'cognitivebing'
 gem 'nokogiri'
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
+  gem 'sqlite3'
 end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'sqlite3', '=1.6.9'
+  gem 'sqlite3'
 end
 
 group :development do

@@ -16,7 +16,6 @@
    https://www.hasbro.com/common/productimages/en_CA/6B57734244EB4196B2F84316D5DA4975/40A370C6A6834E8280B99DD11FF06A25.jpg
    https://insidethemagic.net/wp-content/uploads/2022/12/Han-800x400.jpg
    https://media.salon.com/2022/03/harrison-ford-star-wars-0318221.jpg
-   https://miro.medium.com/v2/resize:fit:1400/1*4dqS3ZWAeyQ2DaFdjmd4rA.jpeg
-  ].each do |l|
+   https://miro.medium.com/v2/resize:fit:1400/1*4dqS3ZWAeyQ2DaFdjmd4rA.jpeg].each do |l|
   Link.create!(url: l, thumbnail_url: l)
 end

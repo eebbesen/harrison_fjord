@@ -1,4 +1,5 @@
-# 🇺🇸 https://harrison-fjord.herokuapp.com 🇩🇰
+# 🇺🇸 https://harrison-fjord.onrender.com/ 🇩🇰
+# 🇺🇸 https://harrison-fjord.onrender.com/se 🇸🇪
 
 # Harrison Fjord
 ---

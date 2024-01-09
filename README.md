@@ -11,25 +11,15 @@ A (poor) joke that arose from a fjortuitous name chosen fjor another application
 * `BING_CLIENT`
 * `BING_KEY`
 * `BING_SECRET`
-* `FACEBOOK_APP_ID`
-* `FACEBOOK_API_VERSION`
-* `DELETE_KEY`
+* `DELETE_KEY` (for picture managment console)
 
 ## Bing search
 This application depends upon [the Bing Cognitive Search API](https://datamarket.azure.com/dataset/bing/search) fjor image data.  [The Bing Search API](https://www.microsoft.com/cognitive-services/en-us/bing-image-search-api) offers many different plans, one of which provides 1,000 transactions/month for 0 krone for three months.
 
-You will need to set the `BING_KEY` environment variable as the code references `ENV['BING_KEY']`.
-
-In an attempt to conserve calls and krone, two hundred images are cached after the server is started/restarted.
-
 ## Bing translate
 Because of frequent runtime API errors (and because the values are static) I've translated the quotes using lib/bing_translate.rb and stored the values in a constant.
 
-If you want to use the [Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (again, not required at runtime) set `BING_CLIENT` and `BING_SECRET` environment variables as the script references `ENV['BING_CLIENT']`, `ENV['BING_SECRET']`
-
-## Facebook Login
-1. Create an application in Facebook (https://developers.facebook.com/docs/facebook-login)
-1. Initialize environment variables `FACEBOOK_APP_ID` and `FACEBOOK_VERSION_ID`
+If you want to use the [Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (not required at runtime) set `BING_CLIENT`, `BING_KEY`, and `BING_SECRET` environment variables as the script references `ENV['BING_CLIENT']`, `ENV['BING_SECRET']`
 
 ## FAQ
 **You know that replacing 'a' and 'o' with and 'å' and 'ø' is wrong and plain stupid, right?**
@@ -52,18 +42,22 @@ In a rails console, execute
 ```ruby
 load 'lib/bing_links.rb'
 ```
+or (for a limited set of pictures) using the seeds
+```bash
+bin/rails db:seed
+```
 
 ### Run the application
-
-    yarn install --check-files
-    bin/rails webpacker:compile
-    bin/rails s
+```bash
+yarn install --check-files
+bin/rails webpacker:compile
+bin/rails s
+```
 
 ### Test the application
-
-    bin/rails db:create # one-time only
-    bin/rails db:setup # as needed
-    bin/rake
+```bash
+bin/rake
+```
 
 ### About routes
 * root resolves to Danish
@@ -80,8 +74,7 @@ A vittighed, der opstod fra en tilfældig navn valgt til et andet program af min
 * `BING_CLIENT`
 * `BING_KEY`
 * `BING_SECRET`
-* `FACEBOOK_APP_ID`
-* `FACEBOOK_API_VERSION`
+* `DELETE_KEY`
 
 ## Bing søgning
 Denne applikation afhænger [Bing Search API](https://datamarket.azure.com/dataset/bing/search) for billeddata. [Den Bing Search API](https://datamarket.azure.com/dataset/bing/search) tilbyder mange forskellige planer, hvoraf det ene giver 5.000 transaktioner/måned til 0 kroner.
@@ -94,10 +87,6 @@ I et forsøg på at bevare opkald og krone, er halvtreds billeder, cached efter 
 På grund af hyppige runtime API fejl (og fordi værdierne er statisk) Jeg har oversat de citater bruger lib/bing_translate.rb og opbevaret værdierne i konstant.
 
 Hvis du ønsker at bruge [den Bing Translate API](https://www.microsoft.com/en-us/translator/translatorapi.aspx) (igen, ikke kræves på runtime) sat `BING_CLIENT` og `BING_SECRET` miljøvariabler som scriptet refererer `ENV['BING_CLIENT']`, `ENV['BING_SECRET']`
-
-## Facebook Login
-1. Opret en ansøgning i Facebook
-1. Initialiser miljøvariabler `FACEBOOK_APP_ID` og `FACEBOOK_VERSION_ID`
 
 ## Ofte stillede spørgsmål
 **Du ved, at erstatte »a« og »o« med og »å« og »ø« er forkert og almindelig dum, ikke?**

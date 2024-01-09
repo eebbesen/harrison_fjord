@@ -13,6 +13,10 @@
    https://lumiere-a.akamaihd.net/v1/images/han-solo-main_a4c8ff79.jpeg?region=0%2C0%2C1920%2C1080
    https://compote.slate.com/images/2b6fb34a-8047-4e17-b3d5-64987519657d.jpg?crop=1180%2C842%2Cx0%2Cy0&amp;width=480
    https://cdn.vox-cdn.com/uploads/chorus_asset/file/11415473/HS_FF_000068.jpg
-   https://www.hasbro.com/common/productimages/en_CA/6B57734244EB4196B2F84316D5DA4975/40A370C6A6834E8280B99DD11FF06A25.jpg].each do |l|
+   https://www.hasbro.com/common/productimages/en_CA/6B57734244EB4196B2F84316D5DA4975/40A370C6A6834E8280B99DD11FF06A25.jpg
+   https://insidethemagic.net/wp-content/uploads/2022/12/Han-800x400.jpg
+   https://media.salon.com/2022/03/harrison-ford-star-wars-0318221.jpg
+   https://miro.medium.com/v2/resize:fit:1400/1*4dqS3ZWAeyQ2DaFdjmd4rA.jpeg
+  ].each do |l|
   Link.create!(url: l, thumbnail_url: l)
 end

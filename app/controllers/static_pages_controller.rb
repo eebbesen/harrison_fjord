@@ -32,10 +32,10 @@ class StaticPagesController < ApplicationController
 
   private
 
-  # Bing Cognitive client
-  def bing
-    @bing ||= CognitiveBing.new(ENV.fetch('BING_KEY', nil))
-  end
+  # # Bing Cognitive client
+  # def bing
+  #   @bing ||= CognitiveBing.new(ENV.fetch('BING_KEY', nil))
+  # end
 
   def quote
     DANSKE_CITERE.keys[Random.rand(DANSKE_CITERE.size - 1)]

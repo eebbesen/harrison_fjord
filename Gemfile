@@ -33,8 +33,8 @@ gem 'addressable'
 gem 'bing_translator'
 gem 'bootstrap-sass'
 gem 'cognitivebing'
-gem 'nokogiri'
 gem 'logger'
+gem 'nokogiri'
 
 group :production do
   gem 'pg'

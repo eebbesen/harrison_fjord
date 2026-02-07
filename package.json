@@ -15,7 +15,7 @@
     "serialize-javascript": "^3.1.0",
     "turbolinks": "^5.2.0",
     "url-parse": ">=1.5.2",
-    "webpack": "^5.11.0",
+    "webpack": "^5.104.1",
     "webpack-cli": "^4.2.0"
   },
   "version": "0.1.0",
